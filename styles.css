@@ -1970,4 +1970,96 @@ section {
     #loadingScreen {
         display: none !important;
     }
+
+}
+/* Base styles for all devices */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Make images and videos scale with screen */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container that adapts to screen size */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive typography */
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+p {
+  font-size: 1rem;
+}
+
+/* Flexbox layout for sections */
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.flex-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Responsive menu toggle (mobile) */
+.mobile-menu {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+
+/* Small devices (phones) */
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .flex-row {
+    flex-direction: column;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+}
+
+/* Medium devices (tablets) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    width: 95%;
+  }
 }
